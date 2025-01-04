@@ -24,4 +24,9 @@ class Penyakit extends Model
     {
         return $this->hasMany(Aturan::class, 'penyakit_id');
     }
+
+    public function diagnoses()
+    {
+        return $this->hasMany(Diagnosis::class, 'penyakit_id');
+    }
 }

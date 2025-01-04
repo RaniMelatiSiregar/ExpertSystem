@@ -2,6 +2,38 @@
 
 @section('content')
 <div class="container-fluid">
+    <div class="row justify-content-center">
+        <!-- Card Diagnosa -->
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card text-white bg-info">
+                <div class="card-body">
+                    <h5 class="card-title">Diagnosis</h5>
+                    <p class="card-text display-4">{{ $diagnosisCount }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Gejala -->
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card text-white bg-warning">
+                <div class="card-body">
+                    <h5 class="card-title">Gejala</h5>
+                    <p class="card-text display-4">{{ $symptomCount }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Penyakit -->
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card text-white bg-danger">
+                <div class="card-body">
+                    <h5 class="card-title">Penyakit</h5>
+                    <p class="card-text display-4">{{ $diseaseCount }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="row">
         <!-- Welcome Box -->
         <div class="col-12 mb-4">
@@ -15,7 +47,8 @@
                         dilakukan dengan memulai dari data gejala yang diberikan oleh pengguna untuk 
                         kemudian menarik kesimpulan mengenai tingkat kecanduan. 
                     </p>
-                    <p>Tujuan Aplikasi ini adalah untuk membantu individu atau ahli dalam mendeteksi 
+                    <p>
+                        Tujuan Aplikasi ini adalah untuk membantu individu atau ahli dalam mendeteksi 
                         gejala kecanduan game online secara dini. Aplikasi ini juga bertujuan memberikan 
                         informasi tentang tingkat kecanduan berdasarkan analisis gejala yang diamati, sehingga 
                         pengguna dapat mengetahui sejauh mana kondisi kecanduan yang dialami. Selain itu, aplikasi 
@@ -56,4 +89,9 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 @endsection
